@@ -13,6 +13,11 @@
           "servicePath": "/",
           "uploadType": "package",
           "containerPort": 8090,
+          "containerOptions": {
+            "envVariables": {
+              "CONFIG_LOCATION": "{{env.CONFIG_LOCATION}}"
+            }
+          },
           "volumeMounts": {
             "/opt/.halo": "halo-cfs"
           }
